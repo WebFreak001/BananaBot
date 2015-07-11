@@ -1,0 +1,9 @@
+{
+	"name": "banana-bot",
+	"version": "1.0.0",
+	"description": "",
+	"dependencies":
+	{
+		"ws": "^0.7.2"
+	}
+}
