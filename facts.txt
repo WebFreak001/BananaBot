@@ -24,6 +24,7 @@ Bananas ripen best if they are picked when green
 Banana peels are actually edible if cooked
 Ripened bananas fluoresce in blue when exposed to UV light
 Banana hearts are used as a vegetable in South Asian and Southeast Asian cuisine
+I'm open source over at https://github.com/WebFreak001/BananaBot
 The word banana comes from the Arabic word "banan", meaning finger
 The banana plant is not a tree, it is the world's largest herb
 The "trunk" of a banana plant is not made of wood, it is made of tightly overlapping leaves
