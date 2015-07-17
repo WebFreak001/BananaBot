@@ -1,6 +1,6 @@
 /// <reference path="typings/node/node.d.ts" />
-/// <reference path="typings/ws/ws.d.ts" />
-var WebSocket = require("ws");
+/// <reference path="typings/hack-chat/hack-chat.d.ts" />
+var HackChat = require("hack-chat");
 var fs = require("fs");
 var path = require("path");
 var config = require("./config");
@@ -21,19 +21,11 @@ fs.readFile(path.join(__dirname, config.facts), "utf8", function (err, data) {
         console.warn("No facts found.");
         return;
     }
-    var ws = new WebSocket("ws://hack.chat:6060");
-    ws.on("open", function () {
-        ws.send(JSON.stringify({
-            cmd: "join",
-            channel: config.channel,
-            nick: "BananaBot"
-        }));
+    var chat = new HackChat.Session(config.channel, "BananaBot");
+    chat.on("joining", function () {
         setInterval(function () {
             var fact = Math.floor(Math.random() * facts.length);
-            ws.send(JSON.stringify({
-                cmd: "chat",
-                text: "Fact #" + fact + ": " + facts[fact]
-            }));
+            chat.sendMessage("Fact #" + fact + ": " + facts[fact]);
         }, 3 * 60 * 1000);
     });
 });

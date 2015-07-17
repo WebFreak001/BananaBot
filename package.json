@@ -4,6 +4,6 @@
 	"description": "",
 	"dependencies":
 	{
-		"ws": "^0.7.2"
+		"hack-chat": "~1.1.0"
 	}
 }

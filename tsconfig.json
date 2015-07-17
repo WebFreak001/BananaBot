@@ -21,6 +21,7 @@
     ],
     "files": [
         "./main.ts",
+        "./typings/hack-chat/hack-chat.d.ts",
         "./typings/node/node.d.ts",
         "./typings/ws/ws.d.ts"
     ]
