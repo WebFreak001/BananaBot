@@ -25,7 +25,7 @@ fs.readFile(path.join(__dirname, config.facts), "utf8", function (err, data) {
     chat.on("joining", function () {
         setInterval(function () {
             var fact = Math.floor(Math.random() * facts.length);
-            chat.sendMessage("Fact #" + fact + ": " + facts[fact]);
+            chat.sendMessage("Fact #" + (fact + 1) + ": " + facts[fact]);
         }, 3 * 60 * 1000);
     });
 });
