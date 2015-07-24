@@ -32,7 +32,7 @@ fs.readFile(path.join(__dirname, config.facts), "utf8", function(err, data) {
 
     var lastMessage = new Date().getTime();
 
-    var chat = new HackChat.Session(config.channel, "BananaBotDev"); // join channel and send facts every 3 minutes when joining
+    var chat = new HackChat.Session(config.channel, "BananaBot"); // join channel and send facts every 3 minutes when joining
 
     function saveSend(message) {
         if (lastMessage - new Date().getTime() < -2500) {

@@ -21,7 +21,7 @@ fs.readFile(path.join(__dirname, config.facts), "utf8", function (err, data) {
     if (facts.length == 0)
         return console.warn("No facts found.");
     var lastMessage = new Date().getTime();
-    var chat = new HackChat.Session(config.channel, "BananaBotDev");
+    var chat = new HackChat.Session(config.channel, "BananaBot");
     function saveSend(message) {
         if (lastMessage - new Date().getTime() < -2500) {
             lastMessage = new Date().getTime();
